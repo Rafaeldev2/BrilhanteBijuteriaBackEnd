@@ -27,6 +27,12 @@ public class Produto {
         @Column(nullable = true)
         private Double valorProduto;
         
+        @Column(nullable = true)
+        private Long qtdEstoque;
+        
+        @Column(nullable = true)
+        private Long codigoDeBarra;
+        
         @OneToMany
         private Set<VendasProduto> vendasProduto;
 
@@ -49,6 +55,14 @@ public class Produto {
     public void setVendasProduto(Set<VendasProduto> vendasProduto) {
         this.vendasProduto = vendasProduto;
     }
+    
+    public void setQtdEstoque(Long qtdEstoque) {
+        this.qtdEstoque = qtdEstoque;
+    }
+
+    public void setCodigoDeBarra(Long codigoDeBarra) {
+        this.codigoDeBarra = codigoDeBarra;
+    }
 
     public Long getIDProduto() {
         return IDProduto;
@@ -69,4 +83,14 @@ public class Produto {
     public Set<VendasProduto> getVendasProduto() {
         return vendasProduto;
     }
+
+    public Long getQtdEstoque() {
+        return qtdEstoque;
+    }
+
+    public Long getCodigoDeBarra() {
+        return codigoDeBarra;
+    }
+    
+    
 }
